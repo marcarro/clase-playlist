@@ -8,6 +8,7 @@ class Cancion {
   std::string _duracion;
 
  public:
+  Cancion(std::string nombre, std::string artista, std::string album, std::string duracion);
   std::string getNombre();
   std::string getArtista();
   std::string getAlbum();
@@ -16,12 +17,21 @@ class Cancion {
   void setArtista(std::string artista);
   void setAlbum(std::string album);
   void setDuracion(std::string duracion);
+};
+
+Cancion::Cancion(std::string nombre, std::string artista, std::string album, std::string duracion) 
+: _nombre { nombre },
+  _artista { artista },
+  _album { album },
+  _duracion { duracion }
+{
+  // Asignacion utilizando miembros inicializadores
 }
 
 std::string Cancion::getNombre() { return _nombre; }
 std::string Cancion::getArtista() { return _artista; }
 std::string Cancion::getAlbum() { return _album; }
-std::string Cancion::getDuracion() { return _duracion }
+std::string Cancion::getDuracion() { return _duracion; }
 
 void Cancion::setNombre(std::string nombre) {
   _nombre = nombre;
