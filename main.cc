@@ -1,4 +1,16 @@
 #include <iostream>
-#include <Playlist.h>
+#include "Playlist.h"
 
-int main() {}
+int main() {
+  Playlist playlist;
+  playlist.creaPlaylist();
+  while (playlist.verificarCampoNombre())
+    playlist.agregarCancion();
+  playlist.mostrarMensajeCreacion();
+  playlist.consultaPlaylist();
+  playlist.modoAleatorio();
+  playlist.mostrarCuartaCancion();
+  playlist.consultaPlaylistAleatoria();
+
+  return 0;
+}
