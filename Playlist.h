@@ -24,7 +24,7 @@ class Playlist {
   // Llena el arreglo con números en orden del 0 al n - 1 donde n es el número de elementos
   // Entradas - indices: int[], numCanciones: int
   // Salidas - Ninguna, modifica por referencia
-  void _poblarIndices(int *indices, int numCanciones);
+  void _poblarIndices(int *arreglo, int numElementos);
   bool _campoNombreIngresado = true;
  public:
   // Constructor por omisión
@@ -112,9 +112,9 @@ int Playlist::_stringDuracionASegundos(std::string duracionString) {
 // Llena el arreglo con números en orden del 0 al n - 1 donde n es el número de elementos
 // Entradas - indices: int[], numCanciones: int
 // Salidas - Ninguna, modifica por referencia
-void Playlist::_poblarIndices(int *indices, int numCanciones) {
-  for (int indice = 0; indice < numCanciones; indice++)
-    indices[indice] = indice;
+void Playlist::_poblarIndices(int *arreglo, int numElementos) {
+  for (int indice = 0; indice < numElementos; indice++)
+    arreglo[indice] = indice;
 }
 
 // Función para entrada de datos
